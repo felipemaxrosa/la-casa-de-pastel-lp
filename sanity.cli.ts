@@ -1,0 +1,10 @@
+import { defineCliConfig } from "sanity/cli";
+
+export default defineCliConfig({
+  api: {
+    projectId: "fshl79a5",
+    dataset: "production",
+  },
+  studioHost: "lacasadepastel",
+  autoUpdates: true,
+});

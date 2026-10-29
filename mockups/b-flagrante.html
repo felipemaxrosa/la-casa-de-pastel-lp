@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Casa de Pastel — Direção B · Flagrante Apetitoso</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+/* ============ Direção B — "Flagrante Apetitoso" ============
+   Conceito: claro, caloroso e apetitoso. A COMIDA e a FAMÍLIA são as estrelas;
+   o tema do "assalto" aparece como tempero leve. Foco em conversão.
+   Paleta: creme quente, grafite, vermelho da marca + dourado mostarda.
+   Tipo: Bricolage Grotesque (display com personalidade) + Figtree (texto). */
+:root{
+  --bg:#fbf4ea;
+  --bg-2:#f3e8d8;
+  --surface:#ffffff;
+  --ink:#241c1a;
+  --muted:#6f625c;
+  --line:#e7dac8;
+  --red:#d11f2c;
+  --red-deep:#9a1420;
+  --gold:#e0a23a;
+  --gold-deep:#b97d1e;
+  --maxw:1140px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Figtree",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:"Bricolage Grotesque","Figtree",sans-serif;font-weight:800;line-height:1.02;letter-spacing:-.02em;text-wrap:balance;margin:0}
+a{color:inherit;text-decoration:none}
+.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.78rem;font-weight:700;color:var(--red)}
+.btn{display:inline-flex;align-items:center;gap:.5em;font-weight:700;border-radius:14px;padding:.85em 1.4em;font-size:1rem;transition:transform .15s,box-shadow .15s;cursor:pointer;border:none}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 10px 26px -10px rgba(209,31,44,.7)}
+.btn-red:hover{transform:translateY(-2px);box-shadow:0 16px 34px -10px rgba(209,31,44,.8)}
+.btn-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--red);color:var(--red)}
+.mask{color:var(--red)}
+
+header{position:sticky;top:0;z-index:50;background:rgba(251,244,234,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:.7rem;padding-bottom:.7rem}
+.brand{display:flex;align-items:center;gap:.55rem;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.2rem;letter-spacing:-.02em}
+.brand svg{width:34px;height:34px;flex:none}
+.brand .de{background:var(--red);color:#fff;padding:0 .26em;border-radius:5px}
+.nav-links{display:flex;gap:1.5rem;font-weight:600;font-size:.96rem}
+.nav-links a{color:var(--muted)}.nav-links a:hover{color:var(--ink)}
+.nav .btn{padding:.58em 1.1em;font-size:.9rem}
+@media(max-width:860px){.nav-links{display:none}}
+
+/* hero */
+.hero{padding-top:3rem;padding-bottom:3.5rem}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:2.4rem;align-items:center}
+.hero h1{font-size:clamp(2.6rem,6.5vw,4.6rem)}
+.hero h1 .hl{color:var(--red);position:relative}
+.hero .lead{font-size:clamp(1.05rem,2.2vw,1.25rem);color:var(--muted);margin:1.1rem 0 1.6rem;max-width:46ch}
+.cta-row{display:flex;flex-wrap:wrap;gap:.8rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
+.chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:.4em .9em;font-size:.86rem;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:.4em}
+.chip b{color:var(--red)}
+.hero-art{position:relative}
+.hero-photo{aspect-ratio:4/5;border-radius:26px;background:linear-gradient(150deg,#e8831f,#b2340f);box-shadow:0 30px 60px -24px rgba(154,20,32,.5);display:grid;place-items:end start;padding:1.2rem;color:#fff;font-size:.82rem;max-width:100%}
+.hero-photo span{background:rgba(0,0,0,.4);padding:.3em .6em;border-radius:7px}
+.badge{position:absolute;top:-14px;left:-14px;background:var(--gold);color:#3a2708;font-weight:800;border-radius:16px;padding:.6em .9em;line-height:1;transform:rotate(-7deg);box-shadow:0 10px 24px -8px rgba(224,162,58,.7);font-family:"Bricolage Grotesque",sans-serif;text-align:center}
+.badge small{display:block;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+.badge b{font-size:1.5rem}
+.stars{color:var(--gold-deep)}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}.hero-art{order:-1}.hero-photo{aspect-ratio:16/11}}
+
+section{padding-top:4.2rem;padding-bottom:4.2rem}
+.sec-head{text-align:center;max-width:620px;margin:0 auto 2.4rem}
+.sec-head h2{font-size:clamp(2rem,5vw,3rem)}
+.sec-head p{color:var(--muted);margin:.6rem 0 0}
+
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.pillar{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:1.5rem;text-align:center}
+.pillar .ic{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:#fff3e2;font-size:1.5rem;margin:0 auto .9rem;border:1px solid var(--line)}
+.pillar h3{font-size:1.15rem;margin-bottom:.3rem}
+.pillar p{color:var(--muted);font-size:.93rem;margin:0}
+@media(max-width:860px){.pillars{grid-template-columns:repeat(2,1fr)}}
+
+/* menu */
+.menu{background:var(--bg-2)}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.mcard{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
+.mcard .ph{aspect-ratio:3/2;display:grid;place-items:end start;padding:.9rem;color:#fff;font-size:.78rem}
+.mcard .ph span{background:rgba(0,0,0,.4);padding:.25em .55em;border-radius:6px}
+.ph.s1{background:linear-gradient(135deg,#c2410c,#7a1d0a)}
+.ph.s2{background:linear-gradient(135deg,#d98324,#8a4a12)}
+.ph.s3{background:linear-gradient(135deg,#8e1b22,#4a0d12)}
+.mcard .bd{padding:1.2rem 1.3rem 1.4rem}
+.mcard h3{font-size:1.3rem;margin-bottom:.5rem}
+.mcard ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.45rem}
+.mcard li{font-size:.86rem;background:#f6ece0;border:1px solid var(--line);padding:.3em .7em;border-radius:999px;color:var(--ink)}
+.menu-cta{text-align:center;margin-top:1.8rem}
+.menu-note{color:var(--muted);font-size:.92rem;margin-bottom:1rem}
+@media(max-width:860px){.menu-grid{grid-template-columns:1fr}}
+
+/* about - family */
+.about{display:grid;grid-template-columns:.95fr 1.05fr;gap:2.4rem;align-items:center}
+.about h2{font-size:clamp(1.9rem,4.5vw,2.8rem);margin-bottom:.8rem}
+.about p{color:var(--muted)}
+.polas{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.pola{background:#fff;border:1px solid var(--line);border-radius:12px;padding:.6rem .6rem 1.3rem;box-shadow:0 14px 30px -18px rgba(0,0,0,.4);transform:rotate(-2deg)}
+.pola:nth-child(2){transform:rotate(2deg)}
+.pola:nth-child(3){transform:rotate(1.5deg)}
+.pola:nth-child(4){transform:rotate(-1.5deg)}
+.pola .img{aspect-ratio:1;border-radius:7px;background:linear-gradient(135deg,#caa06a,#7c5a34);display:grid;place-items:center;color:#fff;font-size:.72rem;text-align:center;padding:.5rem}
+.pola .cap{font-family:"Bricolage Grotesque",sans-serif;text-align:center;margin-top:.5rem;font-size:.9rem;color:var(--ink)}
+@media(max-width:860px){.about{grid-template-columns:1fr}}
+
+/* testimonials */
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.tcard{background:#fff;border:1px solid var(--line);border-radius:20px;padding:1.5rem}
+.tcard .st{color:var(--gold-deep);letter-spacing:.1em;margin-bottom:.6rem}
+.tcard p{margin:0 0 1rem;font-size:1.02rem}
+.tcard .who{font-weight:700;font-size:.9rem}
+.tcard .who small{display:block;color:var(--muted);font-weight:500}
+@media(max-width:860px){.tgrid{grid-template-columns:1fr}}
+
+/* contact */
+.contact{background:var(--ink);color:#f7ece2}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:1.8rem;align-items:center}
+.contact h2{font-size:clamp(2rem,5vw,3rem);color:#fff}
+.contact .eyebrow{color:var(--gold)}
+.info{display:grid;gap:.75rem;margin:1.2rem 0 1.6rem}
+.info div{display:flex;gap:.7rem;color:#f0e2d6}
+.info .k{color:var(--gold)}
+.map{min-height:300px;border-radius:22px;background:linear-gradient(135deg,#3a2a24,#241c1a);display:grid;place-items:center;color:#c9b4a6;border:1px solid rgba(255,255,255,.12)}
+.map .pin{font-size:2.4rem}
+@media(max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+
+footer{background:var(--ink);color:#b8a79c;padding:1.8rem 0;border-top:1px solid rgba(255,255,255,.1);font-size:.9rem}
+.foot{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
+.foot .brand{color:#fff}
+
+.fab{position:fixed;right:18px;bottom:18px;z-index:60;background:#25d366;color:#07321b;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;box-shadow:0 12px 30px -6px rgba(37,211,102,.55);transition:transform .15s}
+.fab:hover{transform:scale(1.06)}.fab svg{width:32px;height:32px}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+.ribbon{position:fixed;left:0;top:0;z-index:70;background:var(--gold);color:#3a2708;font-weight:800;letter-spacing:.06em;font-size:.72rem;padding:.35em .9em;border-bottom-right-radius:10px;font-family:"Bricolage Grotesque",sans-serif}
+</style>
+</head>
+<body>
+<div class="ribbon">Modelo B · Flagrante Apetitoso</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="mask" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+<path d="M60 14C34 14 20 34 20 58c0 28 18 48 40 48s40-20 40-48c0-24-14-44-40-44Z"/>
+<path d="M30 50q13-12 25 0"/><path d="M65 50q13-12 25 0"/>
+<circle cx="43" cy="59" r="4.5" fill="currentColor" stroke="none"/><circle cx="77" cy="59" r="4.5" fill="currentColor" stroke="none"/>
+<path d="M60 64v15"/><path d="M44 90q16 14 32 0"/>
+</symbol></svg>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand"><svg class="mask"><use href="#mask"/></svg> La&nbsp;Casa <span class="de">de</span> Pastel</div>
+    <nav class="nav-links"><a href="#cardapio">Cardápio</a><a href="#sobre">Sobre</a><a href="#depoimentos">Depoimentos</a><a href="#contato">Contato</a></nav>
+    <a class="btn btn-red" href="https://wa.me/5512982753022" target="_blank" rel="noopener">Pedir no WhatsApp</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Pastelaria em Caraguatatuba · Litoral Norte</div>
+      <h1 style="margin-top:.6rem">O <span class="hl">melhor pastel</span> de Caraguá, fresquinho e bem recheado</h1>
+      <p class="lead">Massa crocante feita na hora, recheio sem economia e produtos fresquinhos comprados no dia. Peça pelo WhatsApp e receba o flagrante — digo, o sabor.</p>
+      <div class="cta-row">
+        <a class="btn btn-red" href="https://wa.me/5512982753022" target="_blank" rel="noopener">Fazer meu pedido</a>
+        <a class="btn btn-ghost" href="#cardapio">Ver o cardápio</a>
+      </div>
+      <div class="chips">
+        <span class="chip"><b>★</b> 100% recomendam</span>
+        <span class="chip">🔥 Feito na hora</span>
+        <span class="chip">🧀 Bem recheado</span>
+        <span class="chip">💸 Preço honesto</span>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="badge"><small>Desde</small><b>2017</b></div>
+      <div class="hero-photo"><span>foto · pastel recém-saído da fritura</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="eyebrow">Nosso jeito</div><h2>Pastel de verdade, sem segredo</h2></div>
+    <div class="pillars">
+      <div class="pillar reveal"><div class="ic">🔥</div><h3>Feito na hora</h3><p>Fritamos só quando você pede. Crocância garantida.</p></div>
+      <div class="pillar reveal"><div class="ic">🧀</div><h3>Recheio generoso</h3><p>Bem recheado do começo ao fim da mordida.</p></div>
+      <div class="pillar reveal"><div class="ic">🥬</div><h3>Fresco do dia</h3><p>Ingredientes comprados no dia, das melhores marcas.</p></div>
+      <div class="pillar reveal"><div class="ic">💸</div><h3>Preço honesto</h3><p>Muito sabor que cabe no seu bolso.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="cardapio" class="menu">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="eyebrow">Cardápio</div><h2>Escolha o seu</h2><p>Uma amostra do que a casa oferece. Peça pelo WhatsApp que a gente prepara na hora.</p></div>
+    <div class="menu-grid">
+      <div class="mcard reveal"><div class="ph s1"><span>foto · pastéis salgados</span></div><div class="bd"><h3>Salgados</h3><ul><li>Carne</li><li>Queijo</li><li>Pizza</li><li>Frango c/ catupiry</li><li>Palmito</li><li>Carne c/ queijo</li></ul></div></div>
+      <div class="mcard reveal"><div class="ph s2"><span>foto · pastéis doces</span></div><div class="bd"><h3>Doces</h3><ul><li>Chocolate</li><li>Banana c/ canela</li><li>Romeu e Julieta</li><li>Doce de leite</li></ul></div></div>
+      <div class="mcard reveal"><div class="ph s3"><span>foto · açaí & bebidas</span></div><div class="bd"><h3>Da casa</h3><ul><li>Açaí</li><li>Caldo de cana</li><li>Panquecas</li><li>Omeletes</li><li>Cuscuz</li><li>Sucos & café</li></ul></div></div>
+    </div>
+    <div class="menu-cta">
+      <p class="menu-note">Preços completos chegando em breve — peça já pelo WhatsApp.</p>
+      <a class="btn btn-red" href="https://wa.me/5512982753022" target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="wrap about">
+    <div class="polas reveal">
+      <div class="pola"><div class="img">foto · a garagem da vovó (2017)</div><div class="cap">Onde tudo começou</div></div>
+      <div class="pola"><div class="img">foto · barraca na feira do Tinga</div><div class="cap">2018</div></div>
+      <div class="pola"><div class="img">foto · inauguração no Indaiá</div><div class="cap">2019</div></div>
+      <div class="pola"><div class="img">foto · a família reunida</div><div class="cap">Feito com carinho</div></div>
+    </div>
+    <div class="reveal">
+      <div class="eyebrow">Bem-vindos ao nosso sonho</div>
+      <h2>Uma história de família, feita com carinho</h2>
+      <p>Em 2017 começamos na garagem da vovó, com fé e muito trabalho. Em 2018 estávamos na feira do rolo do Tinga e, em 2019, realizamos o sonho de inaugurar a La Casa de Pastel no bairro do Indaiá. Preservamos nossas origens e atendemos cada cliente com empatia — porque pastel bom também é feito de afeto.</p>
+      <a class="btn btn-ghost" href="#contato">Conheça a casa</a>
+    </div>
+  </div>
+</section>
+
+<section id="depoimentos">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="eyebrow">Quem prova, volta</div><h2>O que dizem de nós</h2></div>
+    <div class="tgrid">
+      <div class="tcard reveal"><div class="st">★★★★★</div><p>“Hummm! Que delícia 🙏”</p><div class="who">Marisa R.<small>cliente no Facebook</small></div></div>
+      <div class="tcard reveal"><div class="st">★★★★★</div><p>“Melhor pastel de Caraguá, bem recheado e fresquinho. Virei cliente fiel!”</p><div class="who">Depoimento exemplo<small>substituir por review real</small></div></div>
+      <div class="tcard reveal"><div class="st">★★★★★</div><p>“Atendimento de família e sabor que não erra. Recomendo demais.”</p><div class="who">Depoimento exemplo<small>substituir por review real</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="contact">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Onde nos achar</div>
+      <h2>Venha ou peça pra entregar</h2>
+      <div class="info">
+        <div><span class="k">📍</span><span>Av. Acre, 307 — Indaiá, Caraguatatuba/SP</span></div>
+        <div><span class="k">🕐</span><span>Horário — <i>a confirmar</i></span></div>
+        <div><span class="k">📱</span><span>WhatsApp (12) 98275-3022</span></div>
+        <div><span class="k">☎️</span><span>(12) 2101-3022</span></div>
+      </div>
+      <a class="btn btn-red" href="https://wa.me/5512982753022" target="_blank" rel="noopener">Pedir agora no WhatsApp</a>
+    </div>
+    <div class="map"><div style="text-align:center"><div class="pin">📍</div>mapa · Av. Acre, 307 — Indaiá</div></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div class="brand" style="display:flex;align-items:center;gap:.5rem;font-family:'Bricolage Grotesque',sans-serif;font-weight:800"><svg class="mask" style="width:24px;height:24px"><use href="#mask"/></svg> La Casa <span class="de" style="background:var(--red);color:#fff;padding:0 .26em;border-radius:5px">de</span> Pastel Caragua</div>
+    <div>© 2026 · Atendemos todo o litoral norte: Caraguatatuba, São Sebastião, Ilhabela e Ubatuba</div>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/5512982753022" target="_blank" rel="noopener" aria-label="Pedir no WhatsApp">
+  <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.6 5.9L4 29l8.3-1.6c1.7.9 3.6 1.4 5.7 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.9 1 1-4.8-.3-.4c-1-1.6-1.5-3.4-1.5-5.3C4.9 9.4 9.9 4.9 16 4.9c5.6 0 10.1 4.5 10.1 10.1S21.6 24.8 16 24.8zm5.6-7.6c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Casa de Pastel — 3 Direções</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@500;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#120a0b;--ink:#f6ece6;--muted:#b79a93;--red:#e11d2a;--gold:#e6a52c;--line:rgba(255,255,255,.1);color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:
+  radial-gradient(900px 500px at 80% -10%,rgba(225,29,42,.25),transparent 60%),
+  linear-gradient(180deg,#1b0f11,#120a0b);
+  color:var(--ink);font-family:"Archivo",system-ui,sans-serif;min-height:100vh;
+  padding:max(28px,env(safe-area-inset-top,0px)) max(20px,env(safe-area-inset-left,0px)) 40px}
+.wrap{max-width:1040px;margin:0 auto}
+.eyebrow{font-family:"IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.2em;font-size:.76rem;color:var(--gold)}
+h1{font-family:"Anton",sans-serif;text-transform:uppercase;font-size:clamp(2.2rem,6vw,3.6rem);line-height:.95;margin:.4rem 0 .3rem}
+h1 .hl{color:var(--red)}
+.sub{color:var(--muted);max-width:60ch;margin:0 0 2rem}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+@media(max-width:820px){.grid{grid-template-columns:1fr}}
+.card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#1d1012;transition:transform .15s,border-color .15s;text-decoration:none;color:inherit}
+.card:hover{transform:translateY(-4px);border-color:var(--red)}
+.card .top{height:150px;display:grid;place-items:center;font-family:"Anton",sans-serif;text-transform:uppercase;font-size:1.5rem;letter-spacing:.02em;color:#fff;text-align:center;padding:1rem}
+.a .top{background:radial-gradient(400px 200px at 60% 20%,rgba(225,29,42,.5),transparent),linear-gradient(135deg,#2a1114,#120a0b)}
+.b .top{background:linear-gradient(135deg,#e8831f,#b2340f);color:#fff}
+.c .top{background:repeating-linear-gradient(45deg,#cf1f2a,#cf1f2a 16px,#b01822 16px,#b01822 32px)}
+.card .bd{padding:1.2rem 1.3rem 1.4rem}
+.card h2{font-family:"Anton",sans-serif;text-transform:uppercase;font-size:1.3rem;margin:0 0 .4rem;letter-spacing:.01em}
+.card p{color:var(--muted);font-size:.92rem;margin:0 0 1rem}
+.tag{font-family:"IBM Plex Mono",monospace;font-size:.72rem;color:var(--gold)}
+.go{margin-top:auto;display:inline-flex;align-items:center;gap:.4em;color:var(--red);font-weight:700;font-size:.9rem;text-transform:uppercase;letter-spacing:.05em}
+.note{margin-top:2rem;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line);padding-top:1.2rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">La Casa de Pastel Caragua · Mockups de direção</div>
+  <h1>Escolha a <span class="hl">cara</span> do site</h1>
+  <p class="sub">Três direções, mesmo conteúdo. Todas assumem o tema da máscara com marca própria — mudam o clima, o layout e a tipografia. Abra cada uma, compare e me diga qual seguir (dá pra misturar ideias também).</p>
+  <div class="grid">
+    <a class="card a" href="a-o-cofre.html">
+      <div class="top">O Cofre</div>
+      <div class="bd"><span class="tag">// dark · cinematográfico</span><h2>Modelo A</h2><p>Dramático e noturno. Vinho e grafite profundos, máscara em destaque, vermelho neon. Máximo impacto.</p><span class="go">Abrir A →</span></div>
+    </a>
+    <a class="card b" href="b-flagrante.html">
+      <div class="top">Flagrante Apetitoso</div>
+      <div class="bd"><span class="tag">// claro · comida + família</span><h2>Modelo B</h2><p>Caloroso e apetitoso. Creme, fotos grandes, vermelho + dourado. A comida e a família como estrela. Foco em conversão.</p><span class="go">Abrir B →</span></div>
+    </a>
+    <a class="card c" href="c-dossie.html">
+      <div class="top">Dossiê Pop</div>
+      <div class="bd"><span class="tag">// gráfico · editorial</span><h2>Modelo C</h2><p>Ousado e gráfico. Papel kraft, tipografia gigante, estética de "cartaz de procurado" com carimbos e fichas.</p><span class="go">Abrir C →</span></div>
+    </a>
+  </div>
+  <p class="note">Placeholders de foto estão rotulados (as fotos reais do feed entram depois). Botões de WhatsApp já apontam para o número real: (12) 98275-3022.</p>
+</div>
+</body>
+</html>
