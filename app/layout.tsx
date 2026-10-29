@@ -52,14 +52,12 @@ export const metadata: Metadata = {
     title: `${SITE.name} — ${SITE.tagline}`,
     description:
       "Pastéis fresquinhos feitos na hora, bem recheados, em Caraguatatuba. Peça pelo WhatsApp, com delivery.",
-    images: [{ url: "/logo.png", width: 1813, height: 868, alt: SITE.name }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${SITE.name} — ${SITE.tagline}`,
     description:
       "Pastéis fresquinhos feitos na hora, bem recheados, em Caraguatatuba. Peça pelo WhatsApp.",
-    images: ["/logo.png"],
   },
   robots: { index: true, follow: true },
 };
