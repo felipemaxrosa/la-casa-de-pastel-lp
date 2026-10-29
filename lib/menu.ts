@@ -10,39 +10,38 @@ export type Highlight = {
 };
 
 // "Os Irresistíveis" — itens em destaque (CMS: destaque=true + foto).
-// NOTA: fotos são placeholders (feed do FB) até o cliente enviar as fotos reais.
 export const HIGHLIGHTS: Highlight[] = [
   {
     name: "Pastel de Carne com Queijo",
     desc: "O clássico bem recheado: carne e queijo derretido.",
     price: "R$ 16",
-    photo: "/fotos/foto-9.jpg",
+    photo: "/fotos/carne-queijo.jpg",
     tag: "Pastel",
   },
   {
     name: "Panqueca de Costela Premium",
     desc: "Costela desfiada, catupiry e cream cheese numa panqueca generosa.",
     price: "R$ 26",
-    photo: "/fotos/foto-3.jpg",
+    photo: "/fotos/panqueca-costela.jpg",
     tag: "Panqueca",
   },
   {
     name: "Rondelli de Brócolis, Queijo e Bacon",
     desc: "Massa fresca recheada de brócolis, queijo e bacon.",
     price: "R$ 24",
-    photo: "/fotos/foto-6.jpg",
+    photo: "/fotos/rondelli-brocolis.jpg",
     tag: "Rondelli",
   },
   {
     name: "Nhoque de Queijo",
     desc: "Nhoque macio da casa, no capricho do queijo.",
     price: "R$ 18",
-    photo: "/fotos/foto-4.jpg",
+    photo: "/fotos/nhoque-queijo.jpg",
     tag: "Nhoque",
   },
 ];
 
-export const HERO_PHOTO = "/fotos/foto-8.jpg";
+export const HERO_PHOTO = "/fotos/hero.png";
 export const SOBRE_PHOTO = "/fotos/familia.jpg";
 
 // Prévia do cardápio na home (cards de texto → levam à página completa)
