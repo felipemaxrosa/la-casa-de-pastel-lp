@@ -6,5 +6,5 @@ export default defineCliConfig({
     dataset: "production",
   },
   studioHost: "lacasadepastel",
-  deployment: { autoUpdates: true },
+  deployment: { autoUpdates: true, appId: "lws2ka5nqfbaglnks9unx75o" },
 });
