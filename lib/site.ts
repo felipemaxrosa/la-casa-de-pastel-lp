@@ -1,12 +1,19 @@
 // Configuração central do site. Quando o Sanity estiver conectado,
 // estes valores virão do schema `siteConfig` (com estes como fallback).
 
+// URL base do site (metadata/OG, canonical, JSON-LD, sitemap, robots):
+// domínio próprio (NEXT_PUBLIC_SITE_URL) > URL de produção da Vercel > localhost.
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "http://localhost:3000");
+
 export const SITE = {
   name: "La Casa de Pastel Caragua",
   shortName: "La Casa de Pastel",
   tagline: "O melhor pastel de Caraguatatuba",
-  // Ajustar para o domínio próprio quando registrado:
-  url: "https://lacasadepastelcaragua.com.br",
+  url: SITE_URL,
   whatsapp: "5512982753022",
   whatsappDisplay: "(12) 98275-3022",
   phone: "(12) 2101-3022",
