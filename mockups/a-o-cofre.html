@@ -1,275 +1,870 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>La Casa de Pastel — Direção A · O Cofre</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,600&family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
-<style>
-/* ============ Direção A — "O Cofre" ============
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>La Casa de Pastel — Direção A · O Cofre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,600&family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ============ Direção A — "O Cofre" ============
    Conceito: cinematográfico, dark, dramático. O pastel como "o grande golpe".
    Paleta: vinho/grafite profundos, vermelho carmim em destaque, dourado nos CTAs.
    Tipo: Anton (display condensada pesada) + Barlow (texto). */
-:root{
-  --bg:#120a0b;
-  --bg-2:#1b0f11;
-  --surface:#241316;
-  --line:rgba(255,255,255,.09);
-  --ink:#f6ece6;
-  --muted:#b79a93;
-  --red:#e11d2a;
-  --red-deep:#7a1420;
-  --gold:#e6a52c;
-  --cream:#f7ece2;
-  --maxw:1140px;
-  color-scheme:dark;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;background:var(--bg);color:var(--ink);
-  font-family:"Barlow",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
-  font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
-}
-.wrap{max-width:var(--maxw);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
-h1,h2,h3{font-family:"Anton",sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:.95;text-wrap:balance;margin:0}
-a{color:inherit;text-decoration:none}
-.eyebrow{font-family:"Barlow Semi Condensed",sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:.78rem;font-weight:700;color:var(--gold)}
-.btn{display:inline-flex;align-items:center;gap:.5em;font-family:"Barlow Semi Condensed",sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.06em;border-radius:999px;padding:.85em 1.5em;font-size:1rem;transition:transform .15s ease,box-shadow .15s ease;cursor:pointer;border:none}
-.btn-gold{background:var(--gold);color:#2a1807;box-shadow:0 8px 30px -8px rgba(230,165,44,.6)}
-.btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 36px -8px rgba(230,165,44,.75)}
-.btn-ghost{background:transparent;color:var(--cream);border:1.5px solid rgba(247,236,226,.35)}
-.btn-ghost:hover{border-color:var(--cream);background:rgba(247,236,226,.06)}
-.mask{color:var(--red)}
+      :root {
+        --bg: #120a0b;
+        --bg-2: #1b0f11;
+        --surface: #241316;
+        --line: rgba(255, 255, 255, 0.09);
+        --ink: #f6ece6;
+        --muted: #b79a93;
+        --red: #e11d2a;
+        --red-deep: #7a1420;
+        --gold: #e6a52c;
+        --cream: #f7ece2;
+        --maxw: 1140px;
+        color-scheme: dark;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family:
+          'Barlow',
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          sans-serif;
+        font-size: 17px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+      .wrap {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding-left: max(20px, env(safe-area-inset-left, 0px));
+        padding-right: max(20px, env(safe-area-inset-right, 0px));
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: 'Anton', sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.01em;
+        line-height: 0.95;
+        text-wrap: balance;
+        margin: 0;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .eyebrow {
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--gold);
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5em;
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        border-radius: 999px;
+        padding: 0.85em 1.5em;
+        font-size: 1rem;
+        transition:
+          transform 0.15s ease,
+          box-shadow 0.15s ease;
+        cursor: pointer;
+        border: none;
+      }
+      .btn-gold {
+        background: var(--gold);
+        color: #2a1807;
+        box-shadow: 0 8px 30px -8px rgba(230, 165, 44, 0.6);
+      }
+      .btn-gold:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 36px -8px rgba(230, 165, 44, 0.75);
+      }
+      .btn-ghost {
+        background: transparent;
+        color: var(--cream);
+        border: 1.5px solid rgba(247, 236, 226, 0.35);
+      }
+      .btn-ghost:hover {
+        border-color: var(--cream);
+        background: rgba(247, 236, 226, 0.06);
+      }
+      .mask {
+        color: var(--red);
+      }
 
-/* header */
-header{position:sticky;top:0;z-index:50;background:rgba(18,10,11,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:.7rem;padding-bottom:.7rem}
-.brand{display:flex;align-items:center;gap:.6rem;font-family:"Anton",sans-serif;text-transform:uppercase;font-size:1.15rem;letter-spacing:.02em}
-.brand svg{width:34px;height:34px;flex:none}
-.brand .de{background:var(--red);color:#fff;padding:0 .28em;border-radius:3px}
-.nav-links{display:flex;gap:1.6rem;font-family:"Barlow Semi Condensed",sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:.9rem}
-.nav-links a{color:var(--muted)}.nav-links a:hover{color:var(--cream)}
-.nav .btn{padding:.6em 1.1em;font-size:.88rem}
-@media(max-width:860px){.nav-links{display:none}}
+      /* header */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(18, 10, 11, 0.82);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--line);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-family: 'Anton', sans-serif;
+        text-transform: uppercase;
+        font-size: 1.15rem;
+        letter-spacing: 0.02em;
+      }
+      .brand svg {
+        width: 34px;
+        height: 34px;
+        flex: none;
+      }
+      .brand .de {
+        background: var(--red);
+        color: #fff;
+        padding: 0 0.28em;
+        border-radius: 3px;
+      }
+      .nav-links {
+        display: flex;
+        gap: 1.6rem;
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 0.9rem;
+      }
+      .nav-links a {
+        color: var(--muted);
+      }
+      .nav-links a:hover {
+        color: var(--cream);
+      }
+      .nav .btn {
+        padding: 0.6em 1.1em;
+        font-size: 0.88rem;
+      }
+      @media (max-width: 860px) {
+        .nav-links {
+          display: none;
+        }
+      }
 
-/* hero */
-.hero{position:relative;overflow:hidden;background:
-  radial-gradient(1200px 600px at 75% -10%, rgba(225,29,42,.28), transparent 60%),
-  radial-gradient(900px 500px at 10% 110%, rgba(122,20,32,.45), transparent 60%),
-  linear-gradient(180deg,var(--bg-2),var(--bg))}
-.hero-mask{position:absolute;right:-6%;top:50%;transform:translateY(-50%);width:min(60vw,620px);opacity:.10;color:var(--red);pointer-events:none}
-.hero-inner{position:relative;display:grid;gap:1.4rem;padding-top:5.5rem;padding-bottom:5rem;max-width:760px}
-.hero h1{font-size:clamp(2.9rem,8vw,6rem)}
-.hero h1 .hl{color:var(--red)}
-.lead{font-size:clamp(1.05rem,2.4vw,1.3rem);color:var(--cream);max-width:48ch}
-.cta-row{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:.4rem}
-.trust{display:flex;align-items:center;gap:.7rem;margin-top:1.3rem;color:var(--muted);font-size:.95rem}
-.stars{color:var(--gold);letter-spacing:.1em}
+      /* hero */
+      .hero {
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(
+            1200px 600px at 75% -10%,
+            rgba(225, 29, 42, 0.28),
+            transparent 60%
+          ),
+          radial-gradient(
+            900px 500px at 10% 110%,
+            rgba(122, 20, 32, 0.45),
+            transparent 60%
+          ),
+          linear-gradient(180deg, var(--bg-2), var(--bg));
+      }
+      .hero-mask {
+        position: absolute;
+        right: -6%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: min(60vw, 620px);
+        opacity: 0.1;
+        color: var(--red);
+        pointer-events: none;
+      }
+      .hero-inner {
+        position: relative;
+        display: grid;
+        gap: 1.4rem;
+        padding-top: 5.5rem;
+        padding-bottom: 5rem;
+        max-width: 760px;
+      }
+      .hero h1 {
+        font-size: clamp(2.9rem, 8vw, 6rem);
+      }
+      .hero h1 .hl {
+        color: var(--red);
+      }
+      .lead {
+        font-size: clamp(1.05rem, 2.4vw, 1.3rem);
+        color: var(--cream);
+        max-width: 48ch;
+      }
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin-top: 0.4rem;
+      }
+      .trust {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        margin-top: 1.3rem;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      .stars {
+        color: var(--gold);
+        letter-spacing: 0.1em;
+      }
 
-/* sections */
-section{padding-top:4.5rem;padding-bottom:4.5rem}
-.sec-head{display:grid;gap:.5rem;margin-bottom:2.2rem;max-width:620px}
-.sec-head h2{font-size:clamp(2rem,5vw,3.1rem)}
-.sec-head p{color:var(--muted);margin:0}
+      /* sections */
+      section {
+        padding-top: 4.5rem;
+        padding-bottom: 4.5rem;
+      }
+      .sec-head {
+        display: grid;
+        gap: 0.5rem;
+        margin-bottom: 2.2rem;
+        max-width: 620px;
+      }
+      .sec-head h2 {
+        font-size: clamp(2rem, 5vw, 3.1rem);
+      }
+      .sec-head p {
+        color: var(--muted);
+        margin: 0;
+      }
 
-/* pillars */
-.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
-.pillar{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1.4rem}
-.pillar .ic{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;background:rgba(225,29,42,.14);color:var(--red);margin-bottom:.9rem}
-.pillar h3{font-family:"Barlow Semi Condensed",sans-serif;font-size:1.18rem;letter-spacing:.02em;margin-bottom:.3rem}
-.pillar p{color:var(--muted);font-size:.95rem;margin:0}
-@media(max-width:860px){.pillars{grid-template-columns:repeat(2,1fr)}}
+      /* pillars */
+      .pillars {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+      }
+      .pillar {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 1.4rem;
+      }
+      .pillar .ic {
+        width: 42px;
+        height: 42px;
+        border-radius: 11px;
+        display: grid;
+        place-items: center;
+        background: rgba(225, 29, 42, 0.14);
+        color: var(--red);
+        margin-bottom: 0.9rem;
+      }
+      .pillar h3 {
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        font-size: 1.18rem;
+        letter-spacing: 0.02em;
+        margin-bottom: 0.3rem;
+      }
+      .pillar p {
+        color: var(--muted);
+        font-size: 0.95rem;
+        margin: 0;
+      }
+      @media (max-width: 860px) {
+        .pillars {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
 
-/* menu */
-.menu-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:1.5rem;align-items:start}
-.menu-cats{display:grid;gap:1rem}
-.cat{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1.3rem 1.4rem}
-.cat h3{font-family:"Barlow Semi Condensed",sans-serif;font-size:1.25rem;color:var(--gold);letter-spacing:.02em;display:flex;align-items:center;justify-content:space-between}
-.cat .tag{font-family:"Barlow",sans-serif;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;font-weight:600}
-.cat ul{list-style:none;margin:.7rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
-.cat li{font-size:.92rem;color:var(--cream);background:rgba(255,255,255,.04);border:1px solid var(--line);padding:.35em .75em;border-radius:999px}
-.photo{border-radius:16px;min-height:120px;display:grid;place-items:end start;padding:1rem;color:#fff;font-size:.8rem;letter-spacing:.04em;position:relative;overflow:hidden;border:1px solid var(--line)}
-.photo span{position:relative;background:rgba(0,0,0,.45);padding:.3em .6em;border-radius:6px;backdrop-filter:blur(2px)}
-.photo.p1{background:linear-gradient(135deg,#8a2a12,#3a1208)}
-.photo.p2{background:linear-gradient(135deg,#b8701f,#5a2a0c)}
-.photo.p3{background:linear-gradient(135deg,#7a1420,#2a0a0e)}
-.menu-photos{display:grid;gap:1rem}
-@media(max-width:860px){.menu-grid{grid-template-columns:1fr}}
+      /* menu */
+      .menu-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 1.5rem;
+        align-items: start;
+      }
+      .menu-cats {
+        display: grid;
+        gap: 1rem;
+      }
+      .cat {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 1.3rem 1.4rem;
+      }
+      .cat h3 {
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        font-size: 1.25rem;
+        color: var(--gold);
+        letter-spacing: 0.02em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .cat .tag {
+        font-family: 'Barlow', sans-serif;
+        font-size: 0.72rem;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-weight: 600;
+      }
+      .cat ul {
+        list-style: none;
+        margin: 0.7rem 0 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .cat li {
+        font-size: 0.92rem;
+        color: var(--cream);
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--line);
+        padding: 0.35em 0.75em;
+        border-radius: 999px;
+      }
+      .photo {
+        border-radius: 16px;
+        min-height: 120px;
+        display: grid;
+        place-items: end start;
+        padding: 1rem;
+        color: #fff;
+        font-size: 0.8rem;
+        letter-spacing: 0.04em;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid var(--line);
+      }
+      .photo span {
+        position: relative;
+        background: rgba(0, 0, 0, 0.45);
+        padding: 0.3em 0.6em;
+        border-radius: 6px;
+        backdrop-filter: blur(2px);
+      }
+      .photo.p1 {
+        background: linear-gradient(135deg, #8a2a12, #3a1208);
+      }
+      .photo.p2 {
+        background: linear-gradient(135deg, #b8701f, #5a2a0c);
+      }
+      .photo.p3 {
+        background: linear-gradient(135deg, #7a1420, #2a0a0e);
+      }
+      .menu-photos {
+        display: grid;
+        gap: 1rem;
+      }
+      @media (max-width: 860px) {
+        .menu-grid {
+          grid-template-columns: 1fr;
+        }
+      }
 
-/* about + quote band */
-.band{background:linear-gradient(180deg,var(--bg-2),var(--bg));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
-.about .photo{min-height:260px}
-.about h2{font-size:clamp(1.9rem,4.5vw,2.8rem);margin-bottom:.8rem}
-.about p{color:var(--muted)}
-.about .years{display:flex;gap:1.3rem;margin-top:1.1rem}
-.year b{font-family:"Anton",sans-serif;color:var(--gold);font-size:1.5rem;display:block}
-.year small{color:var(--muted);text-transform:uppercase;letter-spacing:.12em;font-size:.72rem}
-@media(max-width:860px){.about{grid-template-columns:1fr}}
+      /* about + quote band */
+      .band {
+        background: linear-gradient(180deg, var(--bg-2), var(--bg));
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+      .about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+      }
+      .about .photo {
+        min-height: 260px;
+      }
+      .about h2 {
+        font-size: clamp(1.9rem, 4.5vw, 2.8rem);
+        margin-bottom: 0.8rem;
+      }
+      .about p {
+        color: var(--muted);
+      }
+      .about .years {
+        display: flex;
+        gap: 1.3rem;
+        margin-top: 1.1rem;
+      }
+      .year b {
+        font-family: 'Anton', sans-serif;
+        color: var(--gold);
+        font-size: 1.5rem;
+        display: block;
+      }
+      .year small {
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 0.72rem;
+      }
+      @media (max-width: 860px) {
+        .about {
+          grid-template-columns: 1fr;
+        }
+      }
 
-.quote{text-align:center;max-width:720px;margin:0 auto}
-.quote .q{font-family:"Anton",sans-serif;text-transform:uppercase;font-size:clamp(1.7rem,5vw,2.8rem);line-height:1.05;color:var(--cream)}
-.quote .q b{color:var(--red)}
-.quote .who{margin-top:1rem;color:var(--muted);letter-spacing:.06em}
+      .quote {
+        text-align: center;
+        max-width: 720px;
+        margin: 0 auto;
+      }
+      .quote .q {
+        font-family: 'Anton', sans-serif;
+        text-transform: uppercase;
+        font-size: clamp(1.7rem, 5vw, 2.8rem);
+        line-height: 1.05;
+        color: var(--cream);
+      }
+      .quote .q b {
+        color: var(--red);
+      }
+      .quote .who {
+        margin-top: 1rem;
+        color: var(--muted);
+        letter-spacing: 0.06em;
+      }
 
-/* contact */
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:center}
-.contact-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.8rem}
-.contact-card h2{font-size:clamp(1.9rem,4.5vw,2.6rem);margin-bottom:.4rem}
-.info{display:grid;gap:.8rem;margin:1.2rem 0}
-.info div{display:flex;gap:.7rem;color:var(--cream)}
-.info .k{color:var(--gold);min-width:1.4rem;text-align:center}
-.map{min-height:300px;border-radius:18px;border:1px solid var(--line);background:
-  radial-gradient(400px 200px at 70% 30%, rgba(225,29,42,.2), transparent),
-  linear-gradient(135deg,#241316,#160c0e);display:grid;place-items:center;color:var(--muted);position:relative}
-.map .pin{color:var(--red);font-size:2.4rem}
-@media(max-width:860px){.contact{grid-template-columns:1fr}}
+      /* contact */
+      .contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        align-items: center;
+      }
+      .contact-card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 1.8rem;
+      }
+      .contact-card h2 {
+        font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+        margin-bottom: 0.4rem;
+      }
+      .info {
+        display: grid;
+        gap: 0.8rem;
+        margin: 1.2rem 0;
+      }
+      .info div {
+        display: flex;
+        gap: 0.7rem;
+        color: var(--cream);
+      }
+      .info .k {
+        color: var(--gold);
+        min-width: 1.4rem;
+        text-align: center;
+      }
+      .map {
+        min-height: 300px;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        background:
+          radial-gradient(
+            400px 200px at 70% 30%,
+            rgba(225, 29, 42, 0.2),
+            transparent
+          ),
+          linear-gradient(135deg, #241316, #160c0e);
+        display: grid;
+        place-items: center;
+        color: var(--muted);
+        position: relative;
+      }
+      .map .pin {
+        color: var(--red);
+        font-size: 2.4rem;
+      }
+      @media (max-width: 860px) {
+        .contact {
+          grid-template-columns: 1fr;
+        }
+      }
 
-footer{border-top:1px solid var(--line);padding:2.2rem 0;color:var(--muted);font-size:.9rem}
-.foot{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 2.2rem 0;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      .foot {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-/* floating whats */
-.fab{position:fixed;right:18px;bottom:18px;z-index:60;background:#25d366;color:#07321b;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;box-shadow:0 12px 30px -6px rgba(37,211,102,.6);transition:transform .15s}
-.fab:hover{transform:scale(1.06)}
-.fab svg{width:32px;height:32px}
+      /* floating whats */
+      .fab {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        z-index: 60;
+        background: #25d366;
+        color: #07321b;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        box-shadow: 0 12px 30px -6px rgba(37, 211, 102, 0.6);
+        transition: transform 0.15s;
+      }
+      .fab:hover {
+        transform: scale(1.06);
+      }
+      .fab svg {
+        width: 32px;
+        height: 32px;
+      }
 
-/* reveal */
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+      /* reveal */
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+        html {
+          scroll-behavior: auto;
+        }
+      }
 
-.ribbon{position:fixed;left:0;top:0;z-index:70;background:var(--red);color:#fff;font-family:"Barlow Semi Condensed",sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.72rem;padding:.35em .9em;border-bottom-right-radius:10px}
-</style>
-</head>
-<body>
-<div class="ribbon">Modelo A · O Cofre</div>
+      .ribbon {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 70;
+        background: var(--red);
+        color: #fff;
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-size: 0.72rem;
+        padding: 0.35em 0.9em;
+        border-bottom-right-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ribbon">Modelo A · O Cofre</div>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="mask" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-<path d="M60 14C34 14 20 34 20 58c0 28 18 48 40 48s40-20 40-48c0-24-14-44-40-44Z"/>
-<path d="M30 50q13-12 25 0"/><path d="M65 50q13-12 25 0"/>
-<circle cx="43" cy="59" r="4.5" fill="currentColor" stroke="none"/><circle cx="77" cy="59" r="4.5" fill="currentColor" stroke="none"/>
-<path d="M60 64v15"/><path d="M44 90q16 14 32 0"/>
-</symbol></svg>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol
+        id="mask"
+        viewBox="0 0 120 120"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M60 14C34 14 20 34 20 58c0 28 18 48 40 48s40-20 40-48c0-24-14-44-40-44Z"
+        />
+        <path d="M30 50q13-12 25 0" />
+        <path d="M65 50q13-12 25 0" />
+        <circle cx="43" cy="59" r="4.5" fill="currentColor" stroke="none" />
+        <circle cx="77" cy="59" r="4.5" fill="currentColor" stroke="none" />
+        <path d="M60 64v15" />
+        <path d="M44 90q16 14 32 0" />
+      </symbol>
+    </svg>
 
-<header>
-  <div class="wrap nav">
-    <div class="brand"><svg class="mask"><use href="#mask"/></svg> La&nbsp;Casa <span class="de">de</span> Pastel</div>
-    <nav class="nav-links">
-      <a href="#cardapio">Cardápio</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a>
-    </nav>
-    <a class="btn btn-gold" href="https://wa.me/5512982753022" target="_blank" rel="noopener">Pedir no WhatsApp</a>
-  </div>
-</header>
-
-<section class="hero">
-  <svg class="hero-mask"><use href="#mask"/></svg>
-  <div class="wrap hero-inner">
-    <div class="eyebrow">Caraguatatuba · Litoral Norte de SP</div>
-    <h1>O assalto ao <span class="hl">melhor pastel</span> de Caraguá</h1>
-    <p class="lead">Fresquinho, feito na hora e <b>bem recheado</b>. Um flagrante de sabor — e isso não é crime. Peça o seu e participe do golpe.</p>
-    <div class="cta-row">
-      <a class="btn btn-gold" href="https://wa.me/5512982753022" target="_blank" rel="noopener">Peça seu resgate no WhatsApp</a>
-      <a class="btn btn-ghost" href="#cardapio">Ver o cardápio</a>
-    </div>
-    <div class="trust"><span class="stars">★★★★★</span> 100% recomendam · 14 avaliações no Facebook · 3,2 mil seguidores</div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="eyebrow">Por que somos o alvo certo</div>
-      <h2>O plano é simples: pastel de verdade</h2>
-    </div>
-    <div class="pillars">
-      <div class="pillar reveal"><div class="ic">🔥</div><h3>Feito na hora</h3><p>Massa sequinha e crocante, fritada na hora do seu pedido.</p></div>
-      <div class="pillar reveal"><div class="ic">🧀</div><h3>Recheio sem economia</h3><p>Bem recheado, do jeito que pastel bom tem que ser.</p></div>
-      <div class="pillar reveal"><div class="ic">🥬</div><h3>Produtos frescos</h3><p>Comprados no dia, as melhores marcas pra garantir qualidade.</p></div>
-      <div class="pillar reveal"><div class="ic">💸</div><h3>Preço honesto</h3><p>Sabor de sobra sem assaltar o seu bolso.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="cardapio" class="band">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="eyebrow">O dossiê do sabor</div>
-      <h2>Cardápio</h2>
-      <p>Uma seleção do nosso catálogo. Faça seu pedido pelo WhatsApp — a gente prepara na hora.</p>
-    </div>
-    <div class="menu-grid">
-      <div class="menu-cats">
-        <div class="cat reveal"><h3>Pastéis salgados <span class="tag">clássicos</span></h3><ul><li>Carne</li><li>Queijo</li><li>Pizza</li><li>Frango c/ catupiry</li><li>Palmito</li><li>Carne c/ queijo</li><li>Especiais</li></ul></div>
-        <div class="cat reveal"><h3>Pastéis doces <span class="tag">sobremesa</span></h3><ul><li>Chocolate</li><li>Banana c/ canela</li><li>Romeu e Julieta</li><li>Doce de leite</li></ul></div>
-        <div class="cat reveal"><h3>E tem muito mais <span class="tag">na casa</span></h3><ul><li>Açaí</li><li>Caldo de cana</li><li>Panquecas</li><li>Omeletes</li><li>Rondellis</li><li>Cuscuz</li><li>Sucos & café</li></ul></div>
+    <header>
+      <div class="wrap nav">
+        <div class="brand">
+          <svg class="mask"><use href="#mask" /></svg> La&nbsp;Casa
+          <span class="de">de</span> Pastel
+        </div>
+        <nav class="nav-links">
+          <a href="#cardapio">Cardápio</a><a href="#sobre">Sobre</a
+          ><a href="#contato">Contato</a>
+        </nav>
+        <a
+          class="btn btn-gold"
+          href="https://wa.me/5512982753022"
+          target="_blank"
+          rel="noopener"
+          >Pedir no WhatsApp</a
+        >
       </div>
-      <div class="menu-photos">
-        <div class="photo p1 reveal"><span>foto · pastel de carne na chapa</span></div>
-        <div class="photo p2 reveal"><span>foto · caldo de cana geladinho</span></div>
-        <div class="photo p3 reveal"><span>foto · açaí na tigela</span></div>
+    </header>
+
+    <section class="hero">
+      <svg class="hero-mask"><use href="#mask" /></svg>
+      <div class="wrap hero-inner">
+        <div class="eyebrow">Caraguatatuba · Litoral Norte de SP</div>
+        <h1>O assalto ao <span class="hl">melhor pastel</span> de Caraguá</h1>
+        <p class="lead">
+          Fresquinho, feito na hora e <b>bem recheado</b>. Um flagrante de sabor
+          — e isso não é crime. Peça o seu e participe do golpe.
+        </p>
+        <div class="cta-row">
+          <a
+            class="btn btn-gold"
+            href="https://wa.me/5512982753022"
+            target="_blank"
+            rel="noopener"
+            >Peça seu resgate no WhatsApp</a
+          >
+          <a class="btn btn-ghost" href="#cardapio">Ver o cardápio</a>
+        </div>
+        <div class="trust">
+          <span class="stars">★★★★★</span> 100% recomendam · 14 avaliações no
+          Facebook · 3,2 mil seguidores
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="sobre">
-  <div class="wrap about">
-    <div class="photo p3 reveal" style="min-height:300px"><span>foto · a família / a loja no Indaiá</span></div>
-    <div class="reveal">
-      <div class="eyebrow">Bem-vindos ao nosso sonho</div>
-      <h2>De um sonho na garagem da vovó ao melhor pastel do Indaiá</h2>
-      <p>Começamos em 2017, na garagem da vovó, com fé e muito trabalho. Passamos pela feira do rolo do Tinga e, em 2019, inauguramos a La Casa de Pastel. Até hoje atendemos com o mesmo carinho de família.</p>
-      <div class="years">
-        <div class="year"><b>2017</b><small>o sonho começa</small></div>
-        <div class="year"><b>2018</b><small>feira do Tinga</small></div>
-        <div class="year"><b>2019</b><small>loja no Indaiá</small></div>
+    <section>
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <div class="eyebrow">Por que somos o alvo certo</div>
+          <h2>O plano é simples: pastel de verdade</h2>
+        </div>
+        <div class="pillars">
+          <div class="pillar reveal">
+            <div class="ic">🔥</div>
+            <h3>Feito na hora</h3>
+            <p>Massa sequinha e crocante, fritada na hora do seu pedido.</p>
+          </div>
+          <div class="pillar reveal">
+            <div class="ic">🧀</div>
+            <h3>Recheio sem economia</h3>
+            <p>Bem recheado, do jeito que pastel bom tem que ser.</p>
+          </div>
+          <div class="pillar reveal">
+            <div class="ic">🥬</div>
+            <h3>Produtos frescos</h3>
+            <p>Comprados no dia, as melhores marcas pra garantir qualidade.</p>
+          </div>
+          <div class="pillar reveal">
+            <div class="ic">💸</div>
+            <h3>Preço honesto</h3>
+            <p>Sabor de sobra sem assaltar o seu bolso.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section class="band">
-  <div class="wrap quote reveal">
-    <div class="q">“Hummm! <b>Que delícia</b>” 🙏</div>
-    <div class="who">— Marisa R., cliente no Facebook</div>
-  </div>
-</section>
-
-<section id="contato">
-  <div class="wrap contact">
-    <div class="contact-card reveal">
-      <div class="eyebrow">O ponto de encontro</div>
-      <h2>Venha ou peça pra entregar</h2>
-      <div class="info">
-        <div><span class="k">📍</span><span>Av. Acre, 307 — Indaiá, Caraguatatuba/SP</span></div>
-        <div><span class="k">🕐</span><span>Horário de funcionamento — <i>a confirmar</i></span></div>
-        <div><span class="k">📱</span><span>WhatsApp (12) 98275-3022</span></div>
-        <div><span class="k">☎️</span><span>(12) 2101-3022</span></div>
+    <section id="cardapio" class="band">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <div class="eyebrow">O dossiê do sabor</div>
+          <h2>Cardápio</h2>
+          <p>
+            Uma seleção do nosso catálogo. Faça seu pedido pelo WhatsApp — a
+            gente prepara na hora.
+          </p>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-cats">
+            <div class="cat reveal">
+              <h3>Pastéis salgados <span class="tag">clássicos</span></h3>
+              <ul>
+                <li>Carne</li>
+                <li>Queijo</li>
+                <li>Pizza</li>
+                <li>Frango c/ catupiry</li>
+                <li>Palmito</li>
+                <li>Carne c/ queijo</li>
+                <li>Especiais</li>
+              </ul>
+            </div>
+            <div class="cat reveal">
+              <h3>Pastéis doces <span class="tag">sobremesa</span></h3>
+              <ul>
+                <li>Chocolate</li>
+                <li>Banana c/ canela</li>
+                <li>Romeu e Julieta</li>
+                <li>Doce de leite</li>
+              </ul>
+            </div>
+            <div class="cat reveal">
+              <h3>E tem muito mais <span class="tag">na casa</span></h3>
+              <ul>
+                <li>Açaí</li>
+                <li>Caldo de cana</li>
+                <li>Panquecas</li>
+                <li>Omeletes</li>
+                <li>Rondellis</li>
+                <li>Cuscuz</li>
+                <li>Sucos & café</li>
+              </ul>
+            </div>
+          </div>
+          <div class="menu-photos">
+            <div class="photo p1 reveal">
+              <span>foto · pastel de carne na chapa</span>
+            </div>
+            <div class="photo p2 reveal">
+              <span>foto · caldo de cana geladinho</span>
+            </div>
+            <div class="photo p3 reveal">
+              <span>foto · açaí na tigela</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <a class="btn btn-gold" href="https://wa.me/5512982753022" target="_blank" rel="noopener">Fazer meu pedido agora</a>
-    </div>
-    <div class="map reveal"><div style="text-align:center"><div class="pin">📍</div><div>mapa · Av. Acre, 307 — Indaiá</div></div></div>
-  </div>
-</section>
+    </section>
 
-<footer>
-  <div class="wrap foot">
-    <div class="brand" style="font-size:1rem"><svg class="mask" style="width:26px;height:26px"><use href="#mask"/></svg> La Casa <span class="de">de</span> Pastel Caragua</div>
-    <div>© 2026 · O melhor pastel de Caraguatatuba · Atendemos todo o litoral norte</div>
-  </div>
-</footer>
+    <section id="sobre">
+      <div class="wrap about">
+        <div class="photo p3 reveal" style="min-height: 300px">
+          <span>foto · a família / a loja no Indaiá</span>
+        </div>
+        <div class="reveal">
+          <div class="eyebrow">Bem-vindos ao nosso sonho</div>
+          <h2>De um sonho na garagem da vovó ao melhor pastel do Indaiá</h2>
+          <p>
+            Começamos em 2017, na garagem da vovó, com fé e muito trabalho.
+            Passamos pela feira do rolo do Tinga e, em 2019, inauguramos a La
+            Casa de Pastel. Até hoje atendemos com o mesmo carinho de família.
+          </p>
+          <div class="years">
+            <div class="year"><b>2017</b><small>o sonho começa</small></div>
+            <div class="year"><b>2018</b><small>feira do Tinga</small></div>
+            <div class="year"><b>2019</b><small>loja no Indaiá</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<a class="fab" href="https://wa.me/5512982753022" target="_blank" rel="noopener" aria-label="Pedir no WhatsApp">
-  <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.6 5.9L4 29l8.3-1.6c1.7.9 3.6 1.4 5.7 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.9 1 1-4.8-.3-.4c-1-1.6-1.5-3.4-1.5-5.3C4.9 9.4 9.9 4.9 16 4.9c5.6 0 10.1 4.5 10.1 10.1S21.6 24.8 16 24.8zm5.6-7.6c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
-</a>
+    <section class="band">
+      <div class="wrap quote reveal">
+        <div class="q">“Hummm! <b>Que delícia</b>” 🙏</div>
+        <div class="who">— Marisa R., cliente no Facebook</div>
+      </div>
+    </section>
 
-<script>
-const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-</script>
-</body>
+    <section id="contato">
+      <div class="wrap contact">
+        <div class="contact-card reveal">
+          <div class="eyebrow">O ponto de encontro</div>
+          <h2>Venha ou peça pra entregar</h2>
+          <div class="info">
+            <div>
+              <span class="k">📍</span
+              ><span>Av. Acre, 307 — Indaiá, Caraguatatuba/SP</span>
+            </div>
+            <div>
+              <span class="k">🕐</span
+              ><span>Horário de funcionamento — <i>a confirmar</i></span>
+            </div>
+            <div>
+              <span class="k">📱</span><span>WhatsApp (12) 98275-3022</span>
+            </div>
+            <div><span class="k">☎️</span><span>(12) 2101-3022</span></div>
+          </div>
+          <a
+            class="btn btn-gold"
+            href="https://wa.me/5512982753022"
+            target="_blank"
+            rel="noopener"
+            >Fazer meu pedido agora</a
+          >
+        </div>
+        <div class="map reveal">
+          <div style="text-align: center">
+            <div class="pin">📍</div>
+            <div>mapa · Av. Acre, 307 — Indaiá</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap foot">
+        <div class="brand" style="font-size: 1rem">
+          <svg class="mask" style="width: 26px; height: 26px">
+            <use href="#mask" />
+          </svg>
+          La Casa <span class="de">de</span> Pastel Caraguá
+        </div>
+        <div>
+          © 2026 · O melhor pastel de Caraguatatuba · Atendemos todo o litoral
+          norte
+        </div>
+      </div>
+    </footer>
+
+    <a
+      class="fab"
+      href="https://wa.me/5512982753022"
+      target="_blank"
+      rel="noopener"
+      aria-label="Pedir no WhatsApp"
+    >
+      <svg viewBox="0 0 32 32" fill="currentColor">
+        <path
+          d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.6 5.9L4 29l8.3-1.6c1.7.9 3.6 1.4 5.7 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.9 1 1-4.8-.3-.4c-1-1.6-1.5-3.4-1.5-5.3C4.9 9.4 9.9 4.9 16 4.9c5.6 0 10.1 4.5 10.1 10.1S21.6 24.8 16 24.8zm5.6-7.6c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"
+        />
+      </svg>
+    </a>
+
+    <script>
+      const io = new IntersectionObserver(
+        (es) => {
+          es.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add('in');
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.14 },
+      );
+      document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+    </script>
+  </body>
 </html>

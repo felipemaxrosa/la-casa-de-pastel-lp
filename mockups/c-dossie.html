@@ -1,264 +1,975 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>La Casa de Pastel — Direção C · Dossiê Pop</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
-<style>
-/* ============ Direção C — "Dossiê Pop" ============
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>La Casa de Pastel — Direção C · Dossiê Pop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ============ Direção C — "Dossiê Pop" ============
    Conceito: gráfico/editorial. Tipografia gigante + estética de "dossiê/cartaz
    de procurado" (metadados em mono, carimbos, fita). Moderno e ousado.
    Paleta: papel kraft, tinta grafite, vermelho de carimbo + dourado.
    Tipo: Archivo Black (display) + Archivo (texto) + IBM Plex Mono (metadados). */
-:root{
-  --paper:#efe7d7;
-  --paper-2:#e6dcc7;
-  --ink:#1b1917;
-  --muted:#6b6354;
-  --line:#cdbfa4;
-  --red:#cf1f2a;
-  --red-deep:#8f1018;
-  --gold:#c98a1e;
-  --maxw:1160px;
-  color-scheme:light;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:"Archivo",system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;
-  background-image:radial-gradient(circle at 20% 10%,rgba(0,0,0,.025),transparent 40%),radial-gradient(circle at 80% 70%,rgba(0,0,0,.03),transparent 45%)}
-.wrap{max-width:var(--maxw);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
-h1,h2,h3{font-family:"Archivo Black",sans-serif;font-weight:400;text-transform:uppercase;line-height:.92;letter-spacing:-.01em;text-wrap:balance;margin:0}
-a{color:inherit;text-decoration:none}
-.mono{font-family:"IBM Plex Mono",monospace}
-.eyebrow{font-family:"IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.2em;font-size:.74rem;font-weight:600;color:var(--red)}
-.btn{display:inline-flex;align-items:center;gap:.5em;font-family:"Archivo",sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.04em;border-radius:4px;padding:.85em 1.4em;font-size:1rem;transition:transform .12s;cursor:pointer;border:2px solid var(--ink)}
-.btn-red{background:var(--red);color:#fff;border-color:var(--red);box-shadow:4px 4px 0 var(--ink)}
-.btn-red:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
-.btn-ghost{background:transparent;color:var(--ink);box-shadow:4px 4px 0 rgba(27,25,23,.25)}
-.btn-ghost:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 rgba(27,25,23,.35)}
-.mask{color:var(--red)}
+      :root {
+        --paper: #efe7d7;
+        --paper-2: #e6dcc7;
+        --ink: #1b1917;
+        --muted: #6b6354;
+        --line: #cdbfa4;
+        --red: #cf1f2a;
+        --red-deep: #8f1018;
+        --gold: #c98a1e;
+        --maxw: 1160px;
+        color-scheme: light;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: 'Archivo', system-ui, sans-serif;
+        font-size: 17px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+        background-image:
+          radial-gradient(
+            circle at 20% 10%,
+            rgba(0, 0, 0, 0.025),
+            transparent 40%
+          ),
+          radial-gradient(
+            circle at 80% 70%,
+            rgba(0, 0, 0, 0.03),
+            transparent 45%
+          );
+      }
+      .wrap {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding-left: max(20px, env(safe-area-inset-left, 0px));
+        padding-right: max(20px, env(safe-area-inset-right, 0px));
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: 'Archivo Black', sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        line-height: 0.92;
+        letter-spacing: -0.01em;
+        text-wrap: balance;
+        margin: 0;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .mono {
+        font-family: 'IBM Plex Mono', monospace;
+      }
+      .eyebrow {
+        font-family: 'IBM Plex Mono', monospace;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        font-size: 0.74rem;
+        font-weight: 600;
+        color: var(--red);
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5em;
+        font-family: 'Archivo', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        border-radius: 4px;
+        padding: 0.85em 1.4em;
+        font-size: 1rem;
+        transition: transform 0.12s;
+        cursor: pointer;
+        border: 2px solid var(--ink);
+      }
+      .btn-red {
+        background: var(--red);
+        color: #fff;
+        border-color: var(--red);
+        box-shadow: 4px 4px 0 var(--ink);
+      }
+      .btn-red:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 6px 6px 0 var(--ink);
+      }
+      .btn-ghost {
+        background: transparent;
+        color: var(--ink);
+        box-shadow: 4px 4px 0 rgba(27, 25, 23, 0.25);
+      }
+      .btn-ghost:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 6px 6px 0 rgba(27, 25, 23, 0.35);
+      }
+      .mask {
+        color: var(--red);
+      }
 
-header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:3px solid var(--ink)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:.6rem;padding-bottom:.6rem}
-.brand{display:flex;align-items:center;gap:.55rem;font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:1.1rem}
-.brand svg{width:32px;height:32px;flex:none}
-.brand .de{background:var(--red);color:#fff;padding:0 .24em;border-radius:2px}
-.nav-links{display:flex;gap:1.4rem;font-family:"IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.08em;font-size:.84rem;font-weight:500}
-.nav-links a{color:var(--muted)}.nav-links a:hover{color:var(--ink)}
-.nav .btn{padding:.5em 1em;font-size:.85rem;box-shadow:3px 3px 0 var(--ink)}
-@media(max-width:860px){.nav-links{display:none}}
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: var(--paper);
+        border-bottom: 3px solid var(--ink);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+        font-family: 'Archivo Black', sans-serif;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+      }
+      .brand svg {
+        width: 32px;
+        height: 32px;
+        flex: none;
+      }
+      .brand .de {
+        background: var(--red);
+        color: #fff;
+        padding: 0 0.24em;
+        border-radius: 2px;
+      }
+      .nav-links {
+        display: flex;
+        gap: 1.4rem;
+        font-family: 'IBM Plex Mono', monospace;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 0.84rem;
+        font-weight: 500;
+      }
+      .nav-links a {
+        color: var(--muted);
+      }
+      .nav-links a:hover {
+        color: var(--ink);
+      }
+      .nav .btn {
+        padding: 0.5em 1em;
+        font-size: 0.85rem;
+        box-shadow: 3px 3px 0 var(--ink);
+      }
+      @media (max-width: 860px) {
+        .nav-links {
+          display: none;
+        }
+      }
 
-/* hero - wanted poster */
-.hero{border-bottom:3px solid var(--ink);position:relative}
-.hero-inner{display:grid;grid-template-columns:1.25fr .75fr;gap:2rem;padding-top:2.4rem;padding-bottom:2.4rem;align-items:center}
-.caseline{display:flex;flex-wrap:wrap;gap:1.4rem;font-family:"IBM Plex Mono",monospace;font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;border-bottom:1px dashed var(--line);padding-bottom:.9rem;margin-bottom:1.4rem}
-.caseline b{color:var(--ink)}
-.hero h1{font-size:clamp(3rem,10vw,7rem)}
-.hero h1 .red{color:var(--red);-webkit-text-stroke:0}
-.hero .sub{font-size:clamp(1.05rem,2.3vw,1.3rem);color:var(--ink);margin:1.1rem 0 1.6rem;max-width:44ch}
-.cta-row{display:flex;flex-wrap:wrap;gap:.8rem}
-.poster{position:relative;border:3px solid var(--ink);background:var(--paper-2);padding:1rem;text-align:center;box-shadow:8px 8px 0 var(--ink)}
-.poster .ph{aspect-ratio:1;background:repeating-linear-gradient(45deg,#8a1c22,#8a1c22 14px,#781318 14px,#781318 28px);display:grid;place-items:center;color:#fff;font-size:.78rem;padding:1rem;border:2px solid var(--ink)}
-.poster .wanted{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:1.3rem;margin:.6rem 0 .2rem;letter-spacing:.02em}
-.poster .reward{font-family:"IBM Plex Mono",monospace;font-size:.78rem;color:var(--muted)}
-.stamp{position:absolute;top:-16px;right:-16px;transform:rotate(12deg);background:var(--red);color:#fff;border:3px solid #fff;outline:2px solid var(--red);font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:.8rem;padding:.5em .7em;border-radius:6px;line-height:1;text-align:center;box-shadow:0 6px 16px -4px rgba(143,16,24,.6)}
-@media(max-width:860px){.hero-inner{grid-template-columns:1fr}.poster{max-width:360px;margin:0 auto}}
+      /* hero - wanted poster */
+      .hero {
+        border-bottom: 3px solid var(--ink);
+        position: relative;
+      }
+      .hero-inner {
+        display: grid;
+        grid-template-columns: 1.25fr 0.75fr;
+        gap: 2rem;
+        padding-top: 2.4rem;
+        padding-bottom: 2.4rem;
+        align-items: center;
+      }
+      .caseline {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.4rem;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.76rem;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        border-bottom: 1px dashed var(--line);
+        padding-bottom: 0.9rem;
+        margin-bottom: 1.4rem;
+      }
+      .caseline b {
+        color: var(--ink);
+      }
+      .hero h1 {
+        font-size: clamp(3rem, 10vw, 7rem);
+      }
+      .hero h1 .red {
+        color: var(--red);
+        -webkit-text-stroke: 0;
+      }
+      .hero .sub {
+        font-size: clamp(1.05rem, 2.3vw, 1.3rem);
+        color: var(--ink);
+        margin: 1.1rem 0 1.6rem;
+        max-width: 44ch;
+      }
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+      .poster {
+        position: relative;
+        border: 3px solid var(--ink);
+        background: var(--paper-2);
+        padding: 1rem;
+        text-align: center;
+        box-shadow: 8px 8px 0 var(--ink);
+      }
+      .poster .ph {
+        aspect-ratio: 1;
+        background: repeating-linear-gradient(
+          45deg,
+          #8a1c22,
+          #8a1c22 14px,
+          #781318 14px,
+          #781318 28px
+        );
+        display: grid;
+        place-items: center;
+        color: #fff;
+        font-size: 0.78rem;
+        padding: 1rem;
+        border: 2px solid var(--ink);
+      }
+      .poster .wanted {
+        font-family: 'Archivo Black', sans-serif;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        margin: 0.6rem 0 0.2rem;
+        letter-spacing: 0.02em;
+      }
+      .poster .reward {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.78rem;
+        color: var(--muted);
+      }
+      .stamp {
+        position: absolute;
+        top: -16px;
+        right: -16px;
+        transform: rotate(12deg);
+        background: var(--red);
+        color: #fff;
+        border: 3px solid #fff;
+        outline: 2px solid var(--red);
+        font-family: 'Archivo Black', sans-serif;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        padding: 0.5em 0.7em;
+        border-radius: 6px;
+        line-height: 1;
+        text-align: center;
+        box-shadow: 0 6px 16px -4px rgba(143, 16, 24, 0.6);
+      }
+      @media (max-width: 860px) {
+        .hero-inner {
+          grid-template-columns: 1fr;
+        }
+        .poster {
+          max-width: 360px;
+          margin: 0 auto;
+        }
+      }
 
-section{padding-top:3.6rem;padding-bottom:3.6rem;border-bottom:3px solid var(--ink)}
-.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;margin-bottom:2rem;flex-wrap:wrap}
-.sec-head h2{font-size:clamp(1.9rem,5vw,3.2rem)}
-.sec-head .idx{font-family:"IBM Plex Mono",monospace;color:var(--red);font-size:.82rem;letter-spacing:.14em}
+      section {
+        padding-top: 3.6rem;
+        padding-bottom: 3.6rem;
+        border-bottom: 3px solid var(--ink);
+      }
+      .sec-head {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+      }
+      .sec-head h2 {
+        font-size: clamp(1.9rem, 5vw, 3.2rem);
+      }
+      .sec-head .idx {
+        font-family: 'IBM Plex Mono', monospace;
+        color: var(--red);
+        font-size: 0.82rem;
+        letter-spacing: 0.14em;
+      }
 
-/* pillars - evidence */
-.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:3px solid var(--ink);background:var(--ink)}
-.pillar{background:var(--paper);padding:1.4rem}
-.pillar .no{font-family:"IBM Plex Mono",monospace;color:var(--red);font-size:.8rem;letter-spacing:.1em}
-.pillar h3{font-size:1.1rem;margin:.5rem 0 .4rem}
-.pillar p{color:var(--muted);font-size:.92rem;margin:0}
-@media(max-width:860px){.pillars{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.pillars{grid-template-columns:1fr}}
+      /* pillars - evidence */
+      .pillars {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+        border: 3px solid var(--ink);
+        background: var(--ink);
+      }
+      .pillar {
+        background: var(--paper);
+        padding: 1.4rem;
+      }
+      .pillar .no {
+        font-family: 'IBM Plex Mono', monospace;
+        color: var(--red);
+        font-size: 0.8rem;
+        letter-spacing: 0.1em;
+      }
+      .pillar h3 {
+        font-size: 1.1rem;
+        margin: 0.5rem 0 0.4rem;
+      }
+      .pillar p {
+        color: var(--muted);
+        font-size: 0.92rem;
+        margin: 0;
+      }
+      @media (max-width: 860px) {
+        .pillars {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 480px) {
+        .pillars {
+          grid-template-columns: 1fr;
+        }
+      }
 
-/* menu - evidence files */
-.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
-.file{background:var(--paper-2);border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ink)}
-.file .tab{background:var(--ink);color:var(--paper);font-family:"IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.1em;font-size:.76rem;padding:.5em .9em;display:flex;justify-content:space-between}
-.file .ph{aspect-ratio:16/10;display:grid;place-items:end start;padding:.8rem;color:#fff;font-size:.76rem;border-bottom:3px solid var(--ink)}
-.file .ph span{background:rgba(0,0,0,.45);padding:.25em .55em}
-.f1{background:linear-gradient(135deg,#b23410,#6a1c08)}.f2{background:linear-gradient(135deg,#c2851f,#6f4610)}.f3{background:linear-gradient(135deg,#8f1018,#4e0a10)}
-.file .bd{padding:1rem 1.1rem 1.2rem}
-.file h3{font-size:1.2rem;margin-bottom:.5rem}
-.file ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.4rem}
-.file li{font-family:"IBM Plex Mono",monospace;font-size:.78rem;background:var(--paper);border:1px solid var(--line);padding:.25em .6em}
-.menu-cta{margin-top:1.8rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
-.menu-cta .note{font-family:"IBM Plex Mono",monospace;font-size:.8rem;color:var(--muted)}
-@media(max-width:860px){.menu-grid{grid-template-columns:1fr}}
+      /* menu - evidence files */
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem;
+      }
+      .file {
+        background: var(--paper-2);
+        border: 3px solid var(--ink);
+        box-shadow: 6px 6px 0 var(--ink);
+      }
+      .file .tab {
+        background: var(--ink);
+        color: var(--paper);
+        font-family: 'IBM Plex Mono', monospace;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-size: 0.76rem;
+        padding: 0.5em 0.9em;
+        display: flex;
+        justify-content: space-between;
+      }
+      .file .ph {
+        aspect-ratio: 16/10;
+        display: grid;
+        place-items: end start;
+        padding: 0.8rem;
+        color: #fff;
+        font-size: 0.76rem;
+        border-bottom: 3px solid var(--ink);
+      }
+      .file .ph span {
+        background: rgba(0, 0, 0, 0.45);
+        padding: 0.25em 0.55em;
+      }
+      .f1 {
+        background: linear-gradient(135deg, #b23410, #6a1c08);
+      }
+      .f2 {
+        background: linear-gradient(135deg, #c2851f, #6f4610);
+      }
+      .f3 {
+        background: linear-gradient(135deg, #8f1018, #4e0a10);
+      }
+      .file .bd {
+        padding: 1rem 1.1rem 1.2rem;
+      }
+      .file h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+      .file ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+      }
+      .file li {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.78rem;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        padding: 0.25em 0.6em;
+      }
+      .menu-cta {
+        margin-top: 1.8rem;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .menu-cta .note {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+      @media (max-width: 860px) {
+        .menu-grid {
+          grid-template-columns: 1fr;
+        }
+      }
 
-/* about - timeline dossier */
-.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
-.tl{border:3px solid var(--ink);background:var(--paper);padding:1.3rem;position:relative}
-.tl .yr{font-family:"Archivo Black",sans-serif;font-size:2rem;color:var(--red)}
-.tl h3{font-size:1.05rem;margin:.3rem 0 .4rem}
-.tl p{color:var(--muted);font-size:.9rem;margin:0}
-.about-lead{max-width:60ch;color:var(--ink);margin-bottom:1.8rem;font-size:1.08rem}
-@media(max-width:860px){.timeline{grid-template-columns:1fr}}
+      /* about - timeline dossier */
+      .timeline {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem;
+      }
+      .tl {
+        border: 3px solid var(--ink);
+        background: var(--paper);
+        padding: 1.3rem;
+        position: relative;
+      }
+      .tl .yr {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 2rem;
+        color: var(--red);
+      }
+      .tl h3 {
+        font-size: 1.05rem;
+        margin: 0.3rem 0 0.4rem;
+      }
+      .tl p {
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin: 0;
+      }
+      .about-lead {
+        max-width: 60ch;
+        color: var(--ink);
+        margin-bottom: 1.8rem;
+        font-size: 1.08rem;
+      }
+      @media (max-width: 860px) {
+        .timeline {
+          grid-template-columns: 1fr;
+        }
+      }
 
-/* quote */
-.quote{background:var(--ink);color:var(--paper)}
-.quote .wrap{text-align:center}
-.quote .eyebrow{color:var(--gold)}
-.quote .q{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:clamp(1.8rem,5.5vw,3.2rem);line-height:1.02;max-width:16ch;margin:1rem auto}
-.quote .q .red{color:var(--red)}
-.quote .who{font-family:"IBM Plex Mono",monospace;font-size:.84rem;color:#c9bfa8;letter-spacing:.1em}
+      /* quote */
+      .quote {
+        background: var(--ink);
+        color: var(--paper);
+      }
+      .quote .wrap {
+        text-align: center;
+      }
+      .quote .eyebrow {
+        color: var(--gold);
+      }
+      .quote .q {
+        font-family: 'Archivo Black', sans-serif;
+        text-transform: uppercase;
+        font-size: clamp(1.8rem, 5.5vw, 3.2rem);
+        line-height: 1.02;
+        max-width: 16ch;
+        margin: 1rem auto;
+      }
+      .quote .q .red {
+        color: var(--red);
+      }
+      .quote .who {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.84rem;
+        color: #c9bfa8;
+        letter-spacing: 0.1em;
+      }
 
-/* contact */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
-.dossier{border:3px solid var(--ink);background:var(--paper-2);box-shadow:6px 6px 0 var(--ink)}
-.dossier .tab{background:var(--red);color:#fff;font-family:"IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;padding:.55em 1em}
-.dossier .bd{padding:1.4rem}
-.dossier h2{font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:1rem}
-.info{display:grid;gap:.7rem;margin-bottom:1.3rem;font-family:"IBM Plex Mono",monospace;font-size:.9rem}
-.info div{display:flex;gap:.6rem}
-.info .k{color:var(--red)}
-.map{border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ink);min-height:320px;display:grid;place-items:center;color:var(--muted);background:repeating-linear-gradient(0deg,var(--paper-2),var(--paper-2) 22px,var(--paper) 22px,var(--paper) 23px);font-family:"IBM Plex Mono",monospace;font-size:.84rem;text-align:center}
-.map .pin{color:var(--red);font-size:2.2rem}
-@media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
+      /* contact */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.4rem;
+      }
+      .dossier {
+        border: 3px solid var(--ink);
+        background: var(--paper-2);
+        box-shadow: 6px 6px 0 var(--ink);
+      }
+      .dossier .tab {
+        background: var(--red);
+        color: #fff;
+        font-family: 'IBM Plex Mono', monospace;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 0.78rem;
+        padding: 0.55em 1em;
+      }
+      .dossier .bd {
+        padding: 1.4rem;
+      }
+      .dossier h2 {
+        font-size: clamp(1.6rem, 4vw, 2.2rem);
+        margin-bottom: 1rem;
+      }
+      .info {
+        display: grid;
+        gap: 0.7rem;
+        margin-bottom: 1.3rem;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.9rem;
+      }
+      .info div {
+        display: flex;
+        gap: 0.6rem;
+      }
+      .info .k {
+        color: var(--red);
+      }
+      .map {
+        border: 3px solid var(--ink);
+        box-shadow: 6px 6px 0 var(--ink);
+        min-height: 320px;
+        display: grid;
+        place-items: center;
+        color: var(--muted);
+        background: repeating-linear-gradient(
+          0deg,
+          var(--paper-2),
+          var(--paper-2) 22px,
+          var(--paper) 22px,
+          var(--paper) 23px
+        );
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.84rem;
+        text-align: center;
+      }
+      .map .pin {
+        color: var(--red);
+        font-size: 2.2rem;
+      }
+      @media (max-width: 860px) {
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+      }
 
-footer{padding:2rem 0;border-bottom:none;font-family:"IBM Plex Mono",monospace;font-size:.82rem;color:var(--muted)}
-.foot{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
+      footer {
+        padding: 2rem 0;
+        border-bottom: none;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.82rem;
+        color: var(--muted);
+      }
+      .foot {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-.fab{position:fixed;right:18px;bottom:18px;z-index:60;background:#25d366;color:#07321b;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);transition:transform .12s}
-.fab:hover{transform:translate(-2px,-2px)}.fab svg{width:30px;height:30px}
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
-.ribbon{position:fixed;left:0;top:0;z-index:70;background:var(--ink);color:var(--paper);font-family:"IBM Plex Mono",monospace;font-weight:600;letter-spacing:.08em;font-size:.72rem;padding:.4em .9em}
-</style>
-</head>
-<body>
-<div class="ribbon">Modelo C · Dossiê Pop</div>
+      .fab {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        z-index: 60;
+        background: #25d366;
+        color: #07321b;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        border: 3px solid var(--ink);
+        box-shadow: 4px 4px 0 var(--ink);
+        transition: transform 0.12s;
+      }
+      .fab:hover {
+        transform: translate(-2px, -2px);
+      }
+      .fab svg {
+        width: 30px;
+        height: 30px;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition:
+          opacity 0.7s,
+          transform 0.7s;
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+        html {
+          scroll-behavior: auto;
+        }
+      }
+      .ribbon {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 70;
+        background: var(--ink);
+        color: var(--paper);
+        font-family: 'IBM Plex Mono', monospace;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        font-size: 0.72rem;
+        padding: 0.4em 0.9em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ribbon">Modelo C · Dossiê Pop</div>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="mask" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-<path d="M60 14C34 14 20 34 20 58c0 28 18 48 40 48s40-20 40-48c0-24-14-44-40-44Z"/>
-<path d="M30 50q13-12 25 0"/><path d="M65 50q13-12 25 0"/>
-<circle cx="43" cy="59" r="4.5" fill="currentColor" stroke="none"/><circle cx="77" cy="59" r="4.5" fill="currentColor" stroke="none"/>
-<path d="M60 64v15"/><path d="M44 90q16 14 32 0"/>
-</symbol></svg>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol
+        id="mask"
+        viewBox="0 0 120 120"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M60 14C34 14 20 34 20 58c0 28 18 48 40 48s40-20 40-48c0-24-14-44-40-44Z"
+        />
+        <path d="M30 50q13-12 25 0" />
+        <path d="M65 50q13-12 25 0" />
+        <circle cx="43" cy="59" r="4.5" fill="currentColor" stroke="none" />
+        <circle cx="77" cy="59" r="4.5" fill="currentColor" stroke="none" />
+        <path d="M60 64v15" />
+        <path d="M44 90q16 14 32 0" />
+      </symbol>
+    </svg>
 
-<header>
-  <div class="wrap nav">
-    <div class="brand"><svg class="mask"><use href="#mask"/></svg> La&nbsp;Casa <span class="de">de</span> Pastel</div>
-    <nav class="nav-links"><a href="#cardapio">Cardápio</a><a href="#sobre">Dossiê</a><a href="#contato">Contato</a></nav>
-    <a class="btn btn-red" href="https://wa.me/5512982753022" target="_blank" rel="noopener">Pedir no WhatsApp</a>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="wrap hero-inner">
-    <div>
-      <div class="caseline">
-        <span>CASO Nº <b>PAST-2017</b></span><span>LOCAL <b>CARAGUATATUBA/SP</b></span><span>COORD <b>-23.62, -45.42</b></span><span>STATUS <b style="color:var(--red)">PROCURADO</b></span>
+    <header>
+      <div class="wrap nav">
+        <div class="brand">
+          <svg class="mask"><use href="#mask" /></svg> La&nbsp;Casa
+          <span class="de">de</span> Pastel
+        </div>
+        <nav class="nav-links">
+          <a href="#cardapio">Cardápio</a><a href="#sobre">Dossiê</a
+          ><a href="#contato">Contato</a>
+        </nav>
+        <a
+          class="btn btn-red"
+          href="https://wa.me/5512982753022"
+          target="_blank"
+          rel="noopener"
+          >Pedir no WhatsApp</a
+        >
       </div>
-      <div class="eyebrow">Litoral Norte · Alvo prioritário: a sua fome</div>
-      <h1>Pega-se em <span class="red">flagrante</span> o melhor pastel</h1>
-      <p class="sub">Fresquinho, feito na hora e bem recheado. Produtos frescos do dia, preço honesto. Considere-se avisado: é viciante.</p>
-      <div class="cta-row">
-        <a class="btn btn-red" href="https://wa.me/5512982753022" target="_blank" rel="noopener">Denunciar minha fome</a>
-        <a class="btn btn-ghost" href="#cardapio">Abrir o cardápio</a>
-      </div>
-    </div>
-    <div class="poster">
-      <div class="stamp">100%<br>recomendam</div>
-      <div class="ph"><span>foto · o suspeito (pastel)</span></div>
-      <div class="wanted">Procura-se: fome</div>
-      <div class="reward">Recompensa: sabor · 14 avaliações</div>
-    </div>
-  </div>
-</section>
+    </header>
 
-<section>
-  <div class="wrap">
-    <div class="sec-head reveal"><h2>As provas contra nós</h2><span class="idx">// evidências 01–04</span></div>
-    <div class="pillars">
-      <div class="pillar reveal"><div class="no">EVID. 01</div><h3>Feito na hora</h3><p>Fritamos só no seu pedido. Crocância em flagrante.</p></div>
-      <div class="pillar reveal"><div class="no">EVID. 02</div><h3>Bem recheado</h3><p>Recheio sem economia — confessamos.</p></div>
-      <div class="pillar reveal"><div class="no">EVID. 03</div><h3>Fresco do dia</h3><p>Ingredientes comprados no dia, melhores marcas.</p></div>
-      <div class="pillar reveal"><div class="no">EVID. 04</div><h3>Preço honesto</h3><p>Nenhum assalto ao seu bolso. Palavra.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="cardapio">
-  <div class="wrap">
-    <div class="sec-head reveal"><h2>Arquivos do sabor</h2><span class="idx">// cardápio</span></div>
-    <div class="menu-grid">
-      <div class="file reveal"><div class="tab"><span>ARQ-01 · SALGADOS</span><span>▾</span></div><div class="ph f1"><span>foto · pastéis salgados</span></div><div class="bd"><h3>Salgados</h3><ul><li>Carne</li><li>Queijo</li><li>Pizza</li><li>Frango c/ catupiry</li><li>Palmito</li><li>Carne c/ queijo</li></ul></div></div>
-      <div class="file reveal"><div class="tab"><span>ARQ-02 · DOCES</span><span>▾</span></div><div class="ph f2"><span>foto · pastéis doces</span></div><div class="bd"><h3>Doces</h3><ul><li>Chocolate</li><li>Banana c/ canela</li><li>Romeu e Julieta</li><li>Doce de leite</li></ul></div></div>
-      <div class="file reveal"><div class="tab"><span>ARQ-03 · DA CASA</span><span>▾</span></div><div class="ph f3"><span>foto · açaí & cia</span></div><div class="bd"><h3>Da casa</h3><ul><li>Açaí</li><li>Caldo de cana</li><li>Panquecas</li><li>Omeletes</li><li>Cuscuz</li><li>Sucos & café</li></ul></div></div>
-    </div>
-    <div class="menu-cta">
-      <a class="btn btn-red" href="https://wa.me/5512982753022" target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
-      <span class="note">// tabela de preços chega em breve</span>
-    </div>
-  </div>
-</section>
-
-<section id="sobre">
-  <div class="wrap">
-    <div class="sec-head reveal"><h2>O dossiê completo</h2><span class="idx">// desde 2017</span></div>
-    <p class="about-lead reveal">Tudo começou na garagem da vovó, com fé e muito trabalho. Da feira do rolo do Tinga até a loja no Indaiá, a La Casa de Pastel sempre foi um negócio de família — feito com carinho e empatia.</p>
-    <div class="timeline">
-      <div class="tl reveal"><div class="yr">2017</div><h3>A garagem da vovó</h3><p>O sonho de empreender começa em casa, preservando nossas origens.</p></div>
-      <div class="tl reveal"><div class="yr">2018</div><h3>Feira do Tinga</h3><p>A barraca na feira do rolo. Tempos difíceis, muita fé e esperança.</p></div>
-      <div class="tl reveal"><div class="yr">2019</div><h3>Loja no Indaiá</h3><p>Inauguramos a La Casa de Pastel com cardápio recheado de opções.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="quote">
-  <div class="wrap reveal">
-    <div class="eyebrow">Depoimento do júri popular</div>
-    <div class="q">“Hummm! <span class="red">Que delícia</span>” 🙏</div>
-    <div class="who">— MARISA R. · CLIENTE · FACEBOOK</div>
-  </div>
-</section>
-
-<section id="contato">
-  <div class="wrap">
-    <div class="contact-grid">
-      <div class="dossier reveal">
-        <div class="tab">FICHA DE CONTATO · LA CASA DE PASTEL</div>
-        <div class="bd">
-          <h2>Entregue-se ao sabor</h2>
-          <div class="info">
-            <div><span class="k">END ▸</span><span>Av. Acre, 307 — Indaiá, Caraguatatuba/SP</span></div>
-            <div><span class="k">HOR ▸</span><span>a confirmar</span></div>
-            <div><span class="k">WPP ▸</span><span>(12) 98275-3022</span></div>
-            <div><span class="k">TEL ▸</span><span>(12) 2101-3022</span></div>
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div>
+          <div class="caseline">
+            <span>CASO Nº <b>PAST-2017</b></span
+            ><span>LOCAL <b>CARAGUATATUBA/SP</b></span
+            ><span>COORD <b>-23.62, -45.42</b></span
+            ><span>STATUS <b style="color: var(--red)">PROCURADO</b></span>
           </div>
-          <a class="btn btn-red" href="https://wa.me/5512982753022" target="_blank" rel="noopener">Fazer meu pedido</a>
+          <div class="eyebrow">
+            Litoral Norte · Alvo prioritário: a sua fome
+          </div>
+          <h1>Pega-se em <span class="red">flagrante</span> o melhor pastel</h1>
+          <p class="sub">
+            Fresquinho, feito na hora e bem recheado. Produtos frescos do dia,
+            preço honesto. Considere-se avisado: é viciante.
+          </p>
+          <div class="cta-row">
+            <a
+              class="btn btn-red"
+              href="https://wa.me/5512982753022"
+              target="_blank"
+              rel="noopener"
+              >Denunciar minha fome</a
+            >
+            <a class="btn btn-ghost" href="#cardapio">Abrir o cardápio</a>
+          </div>
+        </div>
+        <div class="poster">
+          <div class="stamp">100%<br />recomendam</div>
+          <div class="ph"><span>foto · o suspeito (pastel)</span></div>
+          <div class="wanted">Procura-se: fome</div>
+          <div class="reward">Recompensa: sabor · 14 avaliações</div>
         </div>
       </div>
-      <div class="map reveal"><div><div class="pin">📍</div>mapa · Av. Acre, 307<br>Indaiá — Caraguatatuba/SP</div></div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<footer>
-  <div class="wrap foot">
-    <div class="brand" style="display:flex;align-items:center;gap:.5rem;font-family:'Archivo Black',sans-serif;font-size:.95rem;color:var(--ink)"><svg class="mask" style="width:24px;height:24px"><use href="#mask"/></svg> LA CASA <span class="de" style="background:var(--red);color:#fff;padding:0 .24em">DE</span> PASTEL CARAGUA</div>
-    <div>© 2026 · ATENDE TODO O LITORAL NORTE // CARAGUÁ · S.SEBASTIÃO · ILHABELA · UBATUBA</div>
-  </div>
-</footer>
+    <section>
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <h2>As provas contra nós</h2>
+          <span class="idx">// evidências 01–04</span>
+        </div>
+        <div class="pillars">
+          <div class="pillar reveal">
+            <div class="no">EVID. 01</div>
+            <h3>Feito na hora</h3>
+            <p>Fritamos só no seu pedido. Crocância em flagrante.</p>
+          </div>
+          <div class="pillar reveal">
+            <div class="no">EVID. 02</div>
+            <h3>Bem recheado</h3>
+            <p>Recheio sem economia — confessamos.</p>
+          </div>
+          <div class="pillar reveal">
+            <div class="no">EVID. 03</div>
+            <h3>Fresco do dia</h3>
+            <p>Ingredientes comprados no dia, melhores marcas.</p>
+          </div>
+          <div class="pillar reveal">
+            <div class="no">EVID. 04</div>
+            <h3>Preço honesto</h3>
+            <p>Nenhum assalto ao seu bolso. Palavra.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<a class="fab" href="https://wa.me/5512982753022" target="_blank" rel="noopener" aria-label="Pedir no WhatsApp">
-  <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.6 5.9L4 29l8.3-1.6c1.7.9 3.6 1.4 5.7 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.9 1 1-4.8-.3-.4c-1-1.6-1.5-3.4-1.5-5.3C4.9 9.4 9.9 4.9 16 4.9c5.6 0 10.1 4.5 10.1 10.1S21.6 24.8 16 24.8zm5.6-7.6c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
-</a>
+    <section id="cardapio">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <h2>Arquivos do sabor</h2>
+          <span class="idx">// cardápio</span>
+        </div>
+        <div class="menu-grid">
+          <div class="file reveal">
+            <div class="tab"><span>ARQ-01 · SALGADOS</span><span>▾</span></div>
+            <div class="ph f1"><span>foto · pastéis salgados</span></div>
+            <div class="bd">
+              <h3>Salgados</h3>
+              <ul>
+                <li>Carne</li>
+                <li>Queijo</li>
+                <li>Pizza</li>
+                <li>Frango c/ catupiry</li>
+                <li>Palmito</li>
+                <li>Carne c/ queijo</li>
+              </ul>
+            </div>
+          </div>
+          <div class="file reveal">
+            <div class="tab"><span>ARQ-02 · DOCES</span><span>▾</span></div>
+            <div class="ph f2"><span>foto · pastéis doces</span></div>
+            <div class="bd">
+              <h3>Doces</h3>
+              <ul>
+                <li>Chocolate</li>
+                <li>Banana c/ canela</li>
+                <li>Romeu e Julieta</li>
+                <li>Doce de leite</li>
+              </ul>
+            </div>
+          </div>
+          <div class="file reveal">
+            <div class="tab"><span>ARQ-03 · DA CASA</span><span>▾</span></div>
+            <div class="ph f3"><span>foto · açaí & cia</span></div>
+            <div class="bd">
+              <h3>Da casa</h3>
+              <ul>
+                <li>Açaí</li>
+                <li>Caldo de cana</li>
+                <li>Panquecas</li>
+                <li>Omeletes</li>
+                <li>Cuscuz</li>
+                <li>Sucos & café</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="menu-cta">
+          <a
+            class="btn btn-red"
+            href="https://wa.me/5512982753022"
+            target="_blank"
+            rel="noopener"
+            >Pedir pelo WhatsApp</a
+          >
+          <span class="note">// tabela de preços chega em breve</span>
+        </div>
+      </div>
+    </section>
 
-<script>
-const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-</script>
-</body>
+    <section id="sobre">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <h2>O dossiê completo</h2>
+          <span class="idx">// desde 2017</span>
+        </div>
+        <p class="about-lead reveal">
+          Tudo começou na garagem da vovó, com fé e muito trabalho. Da feira do
+          rolo do Tinga até a loja no Indaiá, a La Casa de Pastel sempre foi um
+          negócio de família — feito com carinho e empatia.
+        </p>
+        <div class="timeline">
+          <div class="tl reveal">
+            <div class="yr">2017</div>
+            <h3>A garagem da vovó</h3>
+            <p>
+              O sonho de empreender começa em casa, preservando nossas origens.
+            </p>
+          </div>
+          <div class="tl reveal">
+            <div class="yr">2018</div>
+            <h3>Feira do Tinga</h3>
+            <p>
+              A barraca na feira do rolo. Tempos difíceis, muita fé e esperança.
+            </p>
+          </div>
+          <div class="tl reveal">
+            <div class="yr">2019</div>
+            <h3>Loja no Indaiá</h3>
+            <p>
+              Inauguramos a La Casa de Pastel com cardápio recheado de opções.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote">
+      <div class="wrap reveal">
+        <div class="eyebrow">Depoimento do júri popular</div>
+        <div class="q">“Hummm! <span class="red">Que delícia</span>” 🙏</div>
+        <div class="who">— MARISA R. · CLIENTE · FACEBOOK</div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="wrap">
+        <div class="contact-grid">
+          <div class="dossier reveal">
+            <div class="tab">FICHA DE CONTATO · LA CASA DE PASTEL</div>
+            <div class="bd">
+              <h2>Entregue-se ao sabor</h2>
+              <div class="info">
+                <div>
+                  <span class="k">END ▸</span
+                  ><span>Av. Acre, 307 — Indaiá, Caraguatatuba/SP</span>
+                </div>
+                <div><span class="k">HOR ▸</span><span>a confirmar</span></div>
+                <div>
+                  <span class="k">WPP ▸</span><span>(12) 98275-3022</span>
+                </div>
+                <div>
+                  <span class="k">TEL ▸</span><span>(12) 2101-3022</span>
+                </div>
+              </div>
+              <a
+                class="btn btn-red"
+                href="https://wa.me/5512982753022"
+                target="_blank"
+                rel="noopener"
+                >Fazer meu pedido</a
+              >
+            </div>
+          </div>
+          <div class="map reveal">
+            <div>
+              <div class="pin">📍</div>
+              mapa · Av. Acre, 307<br />Indaiá — Caraguatatuba/SP
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap foot">
+        <div
+          class="brand"
+          style="
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 0.95rem;
+            color: var(--ink);
+          "
+        >
+          <svg class="mask" style="width: 24px; height: 24px">
+            <use href="#mask" />
+          </svg>
+          LA CASA
+          <span
+            class="de"
+            style="background: var(--red); color: #fff; padding: 0 0.24em"
+            >DE</span
+          >
+          PASTEL Caraguá
+        </div>
+        <div>
+          © 2026 · ATENDE TODO O LITORAL NORTE // CARAGUÁ · S.SEBASTIÃO ·
+          ILHABELA · UBATUBA
+        </div>
+      </div>
+    </footer>
+
+    <a
+      class="fab"
+      href="https://wa.me/5512982753022"
+      target="_blank"
+      rel="noopener"
+      aria-label="Pedir no WhatsApp"
+    >
+      <svg viewBox="0 0 32 32" fill="currentColor">
+        <path
+          d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.6 5.9L4 29l8.3-1.6c1.7.9 3.6 1.4 5.7 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.9 1 1-4.8-.3-.4c-1-1.6-1.5-3.4-1.5-5.3C4.9 9.4 9.9 4.9 16 4.9c5.6 0 10.1 4.5 10.1 10.1S21.6 24.8 16 24.8zm5.6-7.6c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"
+        />
+      </svg>
+    </a>
+
+    <script>
+      const io = new IntersectionObserver(
+        (es) => {
+          es.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add('in');
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.14 },
+      );
+      document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+    </script>
+  </body>
 </html>
